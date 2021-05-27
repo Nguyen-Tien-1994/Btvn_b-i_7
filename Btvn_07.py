@@ -154,15 +154,14 @@ print(n2)
 """
 """
 n = ["a","b","c","d","e","f","g","h","i","k","a",'b',"t","u","v"]
-for i in range(1,len(n)):
+j = len(n)
+i = 1
+while i < j:
     if n[i] in n[:i]:
         del n[i]
-print(n)
-n = ["a","b","c","d","e","f","g","h","i","k","a",'b',"t","u","v"]
-for i in range(1,len(n)):
-    for j in range(i):
-        if n[i] == n[j]:
-            del n[i]
+        j -= 1
+        i -= 1
+    i += 1
 print(n)
 """
 
